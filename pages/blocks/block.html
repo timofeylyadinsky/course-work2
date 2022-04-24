@@ -9,6 +9,8 @@
         body{
             display: flex;
             justify-content: center;
+            align-items: center;
+            flex-direction: column;
             margin: 0;
         }
         canvas{
@@ -16,10 +18,26 @@
             border: 1px solid;
             background-color: #F4EEEA;
         }
+        #start_button{
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+        }
+        #weight1{
+            background-color: #0000ff;
+        }
+        #weight2{
+            background-color: #ff0000;
+        }
     </style>
 </head>
 <body>
     <canvas id="canvas" width="600" height="600"></canvas>
+    <div><label for="weight1">Weight for blue</label>
+		<input id="weight1" type="text" name="weight1" value="" placeholder="weight_blue"></div>
+    <div><label for="weight2">Weight for red</label>
+            <input id="weight2" type="text" name="weight2" value="" placeholder="weight_red"></div>
+    <button onclick="start()" id="start_button">Start</button>
     <script src="block.js"></script>
 </body>
 </html>
