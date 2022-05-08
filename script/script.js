@@ -1,6 +1,35 @@
 var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
+var img = new Image();
+               
+img.src = './assets/brown-wooden-texture.jpg';
+
+var pat;
+img.onload = function() {              
+    pat = ctx.createPattern(img, "repeat");
+    
+};
+
+//var img=document.getElementById("wood");
+//var pat=ctx.createPattern(img,"repeat");
+
+
+
+
+var img = new Image();
+var pattern;
+img.onload = function() {
+    ctx.drawImage(img, this.x - 2 * this.size, this.y);
+    pattern = ctx.createPattern(img, "repeat");
+    ctx.fillStyle = pattern; 
+    ctx.fill();
+
+};
+img.src = "http://professorweb.ru/downloads/brick_tile.gif";
+
+
+
 var ball = {
   x: 100,
   y: 100,
@@ -9,19 +38,72 @@ var ball = {
   draw: function() {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
-    ctx.closePath();
-    ctx.fillStyle = this.color;
+    /*ctx.fillStyle = this.color;*/
+    ctx.fillStyle = pattern; 
+   
+    /*
+    img.onload = function() {              
+    // create pattern
+    var pat = ctx.createPattern(img,'repeat');
+    ctx.fillStyle = pat;
     ctx.fill();
+    }*/
+    //ctx.closePath();
+    ctx.fill();
+    ctx.closePath();
   }
 };
 
+var loadLeft = {
+    x: 250,
+    y: 150,
+    size: 20,
+    m: 10,
+    draw: function(){
+        ctx.beginPath();
+        ctx.fillStyle = pattern;
+        ctx.rect(this.x - 2 * this.size, this.y, 4 * this.size, 4 * this.size);
+        
+        ctx.fill();
+        //ctx.stroke();
+        ctx.closePath();
+    }
+};
 
-canvas.fillStyle = "green";
-
-ball.draw();
 
 
 
+
+
+var loadLeft2 = {
+    x: 350,
+    y: 150,
+    size: 20,
+    m: 10,
+    draw: function(){
+        ctx.beginPath();
+        ctx.fillStyle = "#0cdf23";
+        ctx.rect(this.x - 2 * this.size, this.y, 4 * this.size, 4 * this.size);
+        ctx.fill();
+        ctx.closePath();
+    }
+}; 
+
+
+//canvas.fillStyle = "green";
+function startFunc(){
+    ball.draw();
+    loadLeft.draw();
+//loadLeft2.x+=100;
+
+    loadLeft2.draw();
+    loadLeft2.x+=100;
+    loadLeft.y+=10;
+
+}
+
+
+/*
 var myGamePiece;
 var myObstacles = [];
 
@@ -134,4 +216,4 @@ function moveright() {
 function clearmove() {
     myGamePiece.speedX = 0; 
     myGamePiece.speedY = 0; 
-}
+}*/

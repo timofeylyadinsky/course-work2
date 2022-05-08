@@ -58,7 +58,8 @@ var loadLeft = {
     draw: function(){
         ctx.beginPath();
         ctx.fillStyle = "blue";
-        ctx.fillRect(this.x - 2 * this.size, this.y, 4 * this.size, 4 * this.size,)
+        ctx.fillRect(this.x - 2 * this.size, this.y, 4 * this.size, 4 * this.size,);
+        
         ctx.closePath();
     }
 } 
@@ -85,12 +86,13 @@ function drawElements(){
     loadRight.draw();
 }
 
-let a = 1;
+let a = 0, aTemp = 1;
 let yInvisible = block.y + block.radius;
 function start(){
     validate();
     if(loadLeft.m != loadRight.m){
-        a = (g * (loadLeft.m - loadRight.m)/(loadLeft.m + loadRight.m));
+        aTemp = (g * (loadLeft.m - loadRight.m)/(loadLeft.m + loadRight.m));
+        a+=aTemp;
         if(loadRight.y-a <= yInvisible || loadLeft.y+a <= yInvisible) {
             if(loadRight.y < loadLeft.y && loadRight.y > yInvisible){
                 ctx.clearRect(0,0,innerWidth,innerHeight);
@@ -108,6 +110,11 @@ function start(){
                 loadLeft.y=yInvisible+2;
                 drawElements();
             }
+            a = 0;
+            return;
+        }
+        if(loadRight.y-a <= yInvisible+2 || loadLeft.y+a <= yInvisible+2){
+            a=0;
             return;
         }
         ctx.clearRect(0,0,innerWidth,innerHeight);
