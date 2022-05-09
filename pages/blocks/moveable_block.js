@@ -160,22 +160,26 @@ let a = 0, aTemp = 1;
 let yInvisible = block.y + block.radius;
 function start(){
     validate();
-    if(loadLeft.m != loadRight.m){
-        aTemp = (g * (loadLeft.m - loadRight.m)/(loadLeft.m + loadRight.m));
+    if(2 * loadLeft.m != loadRight.m){
+        aTemp = (g * (2 * loadLeft.m - loadRight.m)/(2 * loadLeft.m + loadRight.m));
         a+=aTemp;
         if(loadRight.y-a <= yInvisible || loadLeft.y+a <= yInvisible) {
             if(loadRight.y < loadLeft.y && loadRight.y > yInvisible){
                 ctx.clearRect(0,0,innerWidth,innerHeight);
                 ropeLeft.yEnd+=loadRight.y-yInvisible;
                 loadLeft.y+=loadRight.y-yInvisible;
-                ropeRight.yEnd=yInvisible+2;
+                ropeRight.yEnd=block.y;
+                ropeThird.yEnd=block.y;
                 loadRight.y=yInvisible+2;
+                moveableBlock.y=block.y;
                 drawElements();
             }
             if(loadRight.y > loadLeft.y && loadLeft.y > yInvisible){
                 ctx.clearRect(0,0,innerWidth,innerHeight);
                 ropeRight.yEnd+=loadLeft.y-yInvisible;
+                ropeThird.yEnd+=loadLeft.y-yInvisible;
                 loadRight.y+=loadLeft.y-yInvisible;
+                moveableBlock.y+=loadLeft.y-yInvisible;
                 ropeLeft.yEnd=yInvisible+2;
                 loadLeft.y=yInvisible+2;
                 drawElements();
@@ -190,7 +194,9 @@ function start(){
         ctx.clearRect(0,0,innerWidth,innerHeight);
         drawElements();
         ropeRight.yEnd-=a;
+        ropeThird.yEnd-=a;
         loadRight.y-=a;
+        moveableBlock.y-=a;
         ropeLeft.yEnd+=a;
         loadLeft.y+=a;
         if(loadRight.y > yInvisible || loadLeft.y > yInvisible) requestAnimationFrame(start);
