@@ -23,12 +23,6 @@
             height: 100px;
             margin: 10px;
         }
-        #weight1{
-            background-color: #0000ff;
-        }
-        #weight2{
-            background-color: #ff0000;
-        }
     </style>
 </head>
 <body>
@@ -38,6 +32,44 @@
 		<input id="weight1" type="text" name="weight1" value="" placeholder="weight_blue"></div>
     <div><label for="weight2">Weight for red</label>
             <input id="weight2" type="text" name="weight2" value="" placeholder="weight_red"></div>-->
+
+    <div id="form_block">
+        <div id="checkbox_element">
+                <label for="density1" class="workplace__container">
+                    <input type="radio" checked="checked" id="density1" name="density" value="240" onclick="setDensity(this)">
+                        Probka
+                    <span class="checkmark"></span>
+                </label>
+        </div>
+        <div id="checkbox_element">
+            <label for="density3" class="workplace__container">
+                <input type="radio" id="density3" name="density" value="700" onclick="setDensity(this)">
+                    Dub
+                <span class="checkmark"></span>
+            </label>
+    </div>
+        <div id="checkbox_element">
+            <label for="density2" class="workplace__container">
+                <input type="radio" id="density2" name="density" value="2700" onclick="setDensity(this)">
+                    Mramor
+                <span class="checkmark"></span>
+            </label>
+        </div>
+        <div id="checkbox_element">
+            <label for="density4" class="workplace__container">
+                <input type="radio" id="density4" name="density" value="8900" onclick="setDensity(this)">
+                    Медь
+                <span class="checkmark"></span>
+            </label>
+        </div>
+        <div id="checkbox_element">
+            <label for="density5" class="workplace__container">
+                <input type="radio" id="density5" name="density" value="1800" onclick="setDensity(this)">
+                    Кирпич
+                <span class="checkmark"></span>
+            </label>
+        </div>
+    </div>
     <button onclick="start()" id="start_button">Start</button>
     <script src="arhimed.js"></script>
 </body>
