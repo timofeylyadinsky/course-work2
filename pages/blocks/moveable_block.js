@@ -18,6 +18,14 @@ var block = {
         ctx.arc(this.x, this.y, this.radius/2-5, 0, Math.PI * 2, true);
         ctx.closePath();
         ctx.fill();
+        ctx.beginPath();
+        ctx.moveTo(this.x, this.y);
+        ctx.lineTo(this.x-this.radius, this.y-this.radius);
+        ctx.lineTo(this.x+this.radius, this.y-this.radius);
+        ctx.strokeStyle = "#4D4B4B";
+        ctx.fill();
+        ctx.closePath();
+        ctx.stroke();
       }
 };
 
@@ -36,6 +44,13 @@ var moveableBlock = {
         ctx.arc(this.x, this.y, this.radius/2-5, 0, Math.PI * 2, true);
         ctx.closePath();
         ctx.fill();
+
+        ctx.beginPath();
+        ctx.moveTo(this.x, this.y);
+        ctx.lineTo(this.x, this.y+this.radius);
+        ctx.strokeStyle = "black";
+        ctx.closePath();
+        ctx.stroke();
       }
 };
 
@@ -121,7 +136,7 @@ var loadLeft = {
     x: ropeLeft.x,
     y: ropeLeft.yEnd,
     size: 20,
-    m: 10,
+    m: 5,
     draw: function(){
         ctx.beginPath();
         ctx.fillStyle = "blue";

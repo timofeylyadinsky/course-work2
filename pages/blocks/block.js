@@ -18,8 +18,46 @@ var block = {
         ctx.arc(this.x, this.y, this.radius/2-5, 0, Math.PI * 2, true);
         ctx.closePath();
         ctx.fill();
+        ctx.beginPath();
+        ctx.moveTo(this.x, this.y);
+        ctx.lineTo(this.x-this.radius, this.y-this.radius);
+        ctx.lineTo(this.x+this.radius, this.y-this.radius);
+        ctx.strokeStyle = "#4D4B4B";
+        ctx.fill();
+        ctx.closePath();
+        ctx.stroke();
       }
 };
+
+var topLine = {
+    x: 20,
+    y: 10,
+    xEnd:  canvas.width - 20,
+    draw: function() {
+        let tmpX = this.x;
+        while(tmpX < this.xEnd){
+            ctx.beginPath();
+            ctx.lineWidth = 3;
+            ctx.moveTo(tmpX, this.y);
+            tmpX+=10;
+            ctx.lineTo(tmpX, 1);
+            ctx.strokeStyle = "#4D4B4B";
+            ctx.closePath();
+            ctx.stroke();
+        };
+        ctx.beginPath();
+        ctx.lineWidth = 5;
+        ctx.moveTo(this.x, this.y);
+        ctx.lineTo(this.xEnd, this.y);
+        ctx.strokeStyle = "black";
+        ctx.closePath();
+        ctx.stroke();
+        ctx.strokeStyle = "black";
+       
+    }
+};
+
+
 
 var ropeLeft = {
     x: block.x -block.radius,
@@ -80,6 +118,7 @@ drawElements();
 
 function drawElements(){
     block.draw();
+    topLine.draw();
     ropeLeft.draw();
     ropeRight.draw();
     loadLeft.draw();
