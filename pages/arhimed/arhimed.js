@@ -29,7 +29,7 @@ var goods = {
     size: 46,
     color: "black",
     draw: function(){
-        this.size = Math.pow(this.volume, 1/3) * 100;        
+        this.size = Math.pow(this.volume, 1/3) * 150;        
         ctx.beginPath();
         ctx.fillStyle = this.color;
         ctx.fillRect(this.x - this.size / 2, this.y - this.size / 2, this.size, this.size);
@@ -127,7 +127,7 @@ function start(){
     fT = goods.volume * goods.density * g;
     let mGoods = goods.volume * goods.density; 
     a = (fT - fA) / mGoods / 100;
-    if(Math.abs(fT-fA) <= 0.01){
+    if(Math.abs(fT-fA) <= 0.1){
         v = 0;
         return;
     }

@@ -5,14 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Physical Laboratory</title>
+    <link rel="stylesheet" href="../../css/style.css">
     <style>
-        body{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            margin: 0;
-        }
         canvas{
             display: block;
             border: 1px solid;
@@ -20,26 +14,54 @@
             /*background-color: #F4EEEA;*/
             background-size: cover;
         }
-        #start_button{
-            width: 100px;
-            height: 100px;
-            margin: 10px;
-        }
-        #weight1{
-            background-color: #0000ff;
-        }
-        #weight2{
-            background-color: #ff0000;
-        }
     </style>
 </head>
 <body>
-    <canvas id="canvas" width="600" height="600"></canvas>
-    <div><label for="weight1">Weight for blue</label>
-		<input id="weight1" type="text" name="weight1" value="" placeholder="weight_blue"></div>
-    <div><label for="weight2">Weight for red</label>
-            <input id="weight2" type="text" name="weight2" value="" placeholder="weight_red"></div>
-    <button onclick="start()" id="start_button">Start</button>
+    <header class="container header-container">
+        <a href="../../index.html"><div class="logo"></div></a>
+        <nav class="nav-container">
+            <ul class="nav-list">
+                <li><a href="./moveable_block.html" class="nav-link">Подвижный блок</a></li>
+                <li><a href="#" class="nav-link active">Неподвижный блок</a></li>
+                <li><a href="../arhimed/arhimed.html" class="nav-link">Закон Архимеда</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <section class="canvas-container">
+            <h1 class="main-title">
+                Неподвижный блок
+            </h1>
+            <p class="subtitle-text">
+                Дана одного блока: неподвижного. Введите значения массы каждого блока, чтобы посмотреть на изменения. Примечание массы по умолчанию: <span style="font-weight: bold; color: blue">10кг.</span> и <span style="font-weight: bold; color: red">10кг.</span>
+            </p>
+        <canvas id="canvas" width="600" height="600"></canvas>
+        <div class="input-block1">
+            <div><label for="weight1" class="label-text">Вес первого, кг.</label>
+                <input id="weight1" type="text" name="weight1" value="10" placeholder="weight_blue"></div>
+            <div><label for="weight2" class="label-text">Вес второго, кг.</label>
+                <input id="weight2" type="text" name="weight2" value="10" placeholder="weight_red"></div>
+            <button onclick="start()" id="start_button">Start</button>
+        </div>
+    </section>
+    </main>
+    <footer class="container footer-container">
+        <div class="footer-text-block">
+            <p class="footer-text">
+            Данная работа является курсовым проектом на тему "Сайт «школьная физическая лаборатория» с интерактивной анимацией, визуализирующей несколько физических процессов"  за авторством студента 2-го курса 9 группы Лядинского Тимофея&copy;
+            </p>
+        </div>
+        <div>
+            <p class="footer-text2">ММФ БГУ, Минск 2022</p>
+        </div>
+        <div class="footer-nav">
+            <ul class="footer-list">
+                <li><a href="./moveable_block.html" class="footer-link active">Подвижный блок</a></li>
+                <li><a href="#" class="footer-link">Неподвижный блок</a></li>
+                <li><a href="../arhimed/arhimed.html" class="footer-link">Закон Архимеда</a></li>
+            </ul>
+        </div>
+    </footer>
     <script src="block.js"></script>
 </body>
 </html>

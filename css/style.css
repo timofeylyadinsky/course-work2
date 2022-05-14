@@ -226,3 +226,77 @@ body{
     /*outline: dotted red;
     text-decoration: underline royalblue;*/
 }
+
+
+
+
+
+.workplace__container {
+    display: block;
+    position: relative;
+    padding-left: 26px;
+    margin-top: 13px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.workplace__container:hover{
+    text-shadow: 0 3px 3px rgba(0,0,255,.85);
+    background-color: lightblue;
+}
+.workplace__container:active{
+    text-shadow: 0 3px 3px rgba(0,0,255,.85);
+    background-color: lightblue;
+}
+
+.workplace__title {
+    font-family: 'Moula';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 32px;
+    letter-spacing: 0.06em;
+}
+
+.workplace__container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    border: 1px solid #878787;
+    border-radius: 50%;
+}
+
+.workplace__container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+.workplace__container input:checked ~ .checkmark {
+    background-color: #e66465;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.workplace__container input:checked ~ .checkmark:after {
+    display: block;
+}
+  
+.workplace {
+    padding-bottom: 100px;
+}

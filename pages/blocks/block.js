@@ -131,6 +131,7 @@ function start(){
     validate();
     if(loadLeft.m != loadRight.m){
         aTemp = (g * (loadLeft.m - loadRight.m)/(loadLeft.m + loadRight.m));
+        aTemp /= 5;
         a+=aTemp;
         if(loadRight.y-a <= yInvisible || loadLeft.y+a <= yInvisible) {
             if(loadRight.y < loadLeft.y && loadRight.y > yInvisible){
@@ -170,11 +171,11 @@ function validate(){
     let weight1 = parseFloat(document.getElementById("weight1").value);
     let weight2 = parseFloat(document.getElementById("weight2").value);
     if(!isNaN(weight1)){
-        if(weight1 > 9999 || weight1 <= 0) alert("Incorrect weight of blue load")
+        if(weight1 > 999 || weight1 < 0) alert("Incorrect weight of blue load")
         else loadLeft.m = weight1;
     }
     if(!isNaN(weight2)){
-        if(weight2 > 9999 || weight2 <= 0) alert("Incorrect weight of red load")
+        if(weight2 > 999 || weight2 < 0) alert("Incorrect weight of red load")
         else loadRight.m = weight2;
     }
 }

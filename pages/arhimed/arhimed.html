@@ -12,7 +12,9 @@
             display: block;
             margin: 0 auto;
             border: 1px solid;
-            background-color: #F4EEEA;
+            /*background-color: #F4EEEA;*/
+            background-image: url("../../assets/glass-texture.jpg");
+            background-size: cover;
         }
     </style>
 </head>
@@ -33,7 +35,7 @@
                 Закон Архимеда
             </h1>
             <p class="subtitle-text">
-                Дан сосуд с жидкостью(вода) плотностью 1000 кг/см3. В нем находится кубическое тело определенного вещества(по умолчанию, пробка плотностью 240 кг/см3, объем 0,1 м3). Выберете из предложенных материалов свой и смотрите результат действия силы Архимеда на тело.
+                Дан сосуд с жидкостью (вода), плотность которой 1000 кг/см3. В нем находится кубическое тело некоторой плотности, объём которого <span style="font-weight: bold; color: black;">0,1 м3</span>. Выберете материал тела и смотрите результат действия силы Архимеда на него.
             </p>
              <canvas id="canvas" width="600" height="700"></canvas>
     <!--
@@ -42,25 +44,25 @@
     <div><label for="weight2">Weight for red</label>
             <input id="weight2" type="text" name="weight2" value="" placeholder="weight_red"></div>-->
 
-            <div id="form_block">
+        <div id="form_block">
                  <div id="checkbox_element">
                     <label for="density1" class="workplace__container">
                         <input type="radio" checked="checked" id="density1" name="density" value="240" onclick="setDensity(this)">
-                        Probka
+                        Пробка
                         <span class="checkmark"></span>
                     </label>
             </div>
             <div id="checkbox_element">
                 <label for="density3" class="workplace__container">
                     <input type="radio" id="density3" name="density" value="700" onclick="setDensity(this)">
-                        Dub
+                        Дуб
                     <span class="checkmark"></span>
                 </label>
             </div>
             <div id="checkbox_element">
                 <label for="density2" class="workplace__container">
                     <input type="radio" id="density2" name="density" value="2700" onclick="setDensity(this)">
-                    Mramor
+                    Мрамор
                     <span class="checkmark"></span>
                 </label>
             </div>
@@ -93,9 +95,9 @@
         </div>
         <div class="footer-nav">
             <ul class="footer-list">
-                <li><a href="#" class="footer-link active">Подвижный блок</a></li>
-                <li><a href="./block.html" class="footer-link">Неподвижный блок</a></li>
-                <li><a href="../arhimed/arhimed.html" class="footer-link">Закон Архимеда</a></li>
+                <li><a href="../blocks/moveable_block.html" class="footer-link active">Подвижный блок</a></li>
+                <li><a href="../blocks/block.html" class="footer-link">Неподвижный блок</a></li>
+                <li><a href="#" class="footer-link">Закон Архимеда</a></li>
             </ul>
         </div>
     </footer>
