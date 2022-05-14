@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Physical Laboratory</title>
+    <link rel="stylesheet" href="./css/style.css">
     <style>
         canvas {
             border:1px solid #d3d3d3;
@@ -12,15 +13,35 @@
         }
         </style>
 </head>
-<body <!--onload="startGame()"-->>
-    <a href="./pages/blocks/block.html">Block</a>
-    <a href="./pages/blocks/moveable_block.html">Moveable Block</a>
-    <a href="./pages/arhimed/arhimed.html">Arhimed Law</a>
-    <img src="assets/brown-wooden-texture.jpg" id="wood" style="display: none">
+<body><!--onload="startGame()"-->
+    <header class="container header-container">
+        <a href="#"><div class="logo"></div></a>
+        <nav class="nav-container">
+            <ul class="nav-list">
+                <li><a href="./pages/blocks/moveable_block.html" class="nav-link">Подвижный блок</a></li>
+                <li><a href="./pages/blocks/block.html" class="nav-link">Неподвижный блок</a></li>
+                <li><a href="./pages/arhimed/arhimed.html" class="nav-link">Закон Архимеда</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <section class="section-title">
+            <h1 class="main-title">
+                Физическая Лаборатория
+            </h1>
+            <p class="subtitle-text">
+                Школьная физическая лаборатория» с интерактивной анимацией, визуализирующей несколько физических процессов
+            </p>
+        </section>
+    </main>
+    <footer>
+        
+    </footer>
+    <!--<img src="assets/brown-wooden-texture.jpg" id="wood" style="display: none">
     <canvas id="canvas" width="600" height="300"></canvas>
     <button onClick="startFunc()">start</button>
     <script src="./script/script.js"></script>
-    Создание сайта «школьная физическая лаборатория» с интерактивной анимацией, визуализирующей несколько физических процессов
+    Создание сайта «школьная физическая лаборатория» с интерактивной анимацией, визуализирующей несколько физических процессов-->
     <script>
 /*
         var myGamePiece;

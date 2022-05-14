@@ -95,15 +95,12 @@ function addColorToGoods(){
         goods.color = "#854232"
         break;
         case 8900: 
-        var gradient = ctx.createLinearGradient(goods.x - 0.5 * goods.size, goods.y - 0.5 * goods.size, goods.x + goods.size * 0.5, goods.y + goods.size * 0.5);
-        gradient.addColorStop(0, '#FFFAF0');
-        gradient.addColorStop(.1, '#CDCDC8');
-        gradient.addColorStop(.3, '#BEBEC8');//#BEBEC8
-        gradient.addColorStop(.4, '#FFFAF0');
-        gradient.addColorStop(.7, '#FFFAF0');
-        gradient.addColorStop(.8, '#CDCDC8');
-        gradient.addColorStop(.9, '#BEBEC8');
-        gradient.addColorStop(1, '#FFFAF0');
+        var gradient = ctx.createLinearGradient(goods.x - 0.5 * goods.size, goods.y + 0.5 * goods.size, goods.x + goods.size * 0.5, goods.y - goods.size * 0.5);
+        gradient.addColorStop(0, '#5B1B11');
+        gradient.addColorStop(.4,'#C45C3F');
+        gradient.addColorStop(.5, '#E8AB7E');//F2C593
+        gradient.addColorStop(.6,'#C45C3F');//C45C3F
+        gradient.addColorStop(1, '#5B1B11');
         goods.color = gradient;
         break;
     }
@@ -143,7 +140,14 @@ function start(){
         ctx.clearRect(0,0,innerWidth,innerHeight);
         drawElements();
         return;
-    };
+    }else if(goods.y + 0.5 * goods.size > canvas.height && a < 0){
+        goods.y = canvas.height - 0.5 * goods.size;
+        //a = 0;
+        v = 0;
+        ctx.clearRect(0,0,innerWidth,innerHeight);
+        drawElements();
+        //return;
+    }
     if(goods.y - goods.size * 0.5 <= water.y){
         if(a <= 0){
             let heightAbove = 0;

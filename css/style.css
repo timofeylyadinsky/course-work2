@@ -1,1 +1,124 @@
 /*/*/
+body{
+    background: linear-gradient(to right bottom, #23013A, #9801EE);
+    background-size: contain;
+    background-repeat: no-repeat;  
+    height: 100%;
+    margin: 0;
+}
+.container {
+    max-width: 1440px;
+    margin: 0;
+    padding: 0 20px;
+}
+
+
+.header-container{
+    display: flex;
+    flex-direction: row;
+    font-weight: 400;
+    font-size: 32px;
+}
+.logo {
+    width: 180px;
+    height: 184px;
+    background-image: url('../assets/physics_logo.svg');
+    background-size: contain;
+    background-repeat: no-repeat;  
+    transition: 0.7s;
+    /*margin-left: 10px;
+    margin-top: 20px;*/
+}
+.logo:hover {
+    filter: brightness(0) invert(1);
+    transform: rotate(1.5turn);
+}
+
+
+.nav-container{
+    margin-left: auto
+}
+.nav-list{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    padding: 0;
+    color: #fff;
+    height: 50px;
+    margin-top: 72px;
+}
+.nav-list li{
+    margin: 0 0 0 80px;
+}
+.nav-link{
+    color: #B4B4B4;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    position: relative;
+}
+.nav-link:hover{
+    color: #FFFFFF;
+    /*outline: dotted red;
+    text-decoration: underline royalblue;*/
+}
+
+.nav-link::before {
+	content: '';
+	position: absolute;
+	left: 0; bottom: -5px;
+	width: 0;
+	height: 3px;
+	background-color: red;
+}
+.nav-link:hover:before {
+	width: 100%;
+}
+
+.nav-link::before {
+	transition: width 0.35s;
+}
+
+
+
+.section-title{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main-title{
+    margin-top: 135px;
+    font-weight: 700;
+    font-size: 64px;
+    color: #CDCDCD;
+    margin-bottom: 0;
+}
+
+.subtitle-text{
+    margin-top: 55px;
+    font-weight: 400;
+    font-size: 26px;
+    text-align: center;
+    line-height: 28px;
+    width: 577px;
+    color: #B4B4B4;
+}
+
+
+.canvas-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.input-block1{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
