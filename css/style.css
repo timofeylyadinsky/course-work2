@@ -79,7 +79,12 @@ body{
 .nav-link::before {
 	transition: width 0.35s;
 }
-
+.nav-link.active{
+    color: #FFFFFF;
+    text-decoration: underline red;
+    text-decoration-line: underline;
+    text-underline-offset: 6px;
+}
 
 
 .section-title{
@@ -121,4 +126,103 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+
+
+
+#start_button{
+    width: 220px;
+    height: 55px;
+    cursor: pointer;
+    margin: 10px;
+    font-size: 20px;
+    border: 0;
+    color: #000;
+    transition-duration: 0.4s;
+    border-radius: 10px;
+    background-color: #b4b4b4;
+}
+#start_button:hover{
+    color: #fff;
+    transform: scale(1.1, 1.1);
+}
+#weight1{
+    background-color: #0000ff;
+    margin-top: 10px;
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 24px;
+    transition-duration: 0.4s;
+}
+#weight2{
+    background-color: #ff0000;
+    margin-top: 10px;
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 24px;
+    transition-duration: 0.7s;
+}
+#weight1:focus{
+    text-shadow: 0 3px 3px rgba(0,0,255,.85);
+    background-color: lightblue;
+}
+#weight2:focus{
+    text-shadow: 0 3px 3px rgba(255,0,0,.85);
+    background-color: lightcoral;
+}
+.label-text{
+    font-size: 24px;
+    font-weight: 800;
+}
+
+
+.footer-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-text-block{
+    font-size: 20px;
+    width: 40%;
+}
+.footer-text2{
+    font-size: 20px;
+    font-weight: bold;
+}
+.footer-nav{
+    width: 40%;
+}
+
+
+.footer-list{
+    font-size: 20px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 0;
+    color: #fff;
+    height: 50px;
+    gap: 10px;
+}
+.footer-list li{
+    margin: 0 0 0 80px;
+}
+.footer-link{
+    color: #B4B4B4;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    position: relative;
+}
+.footer-link:hover{
+    color: #FFFFFF;
+    /*outline: dotted red;
+    text-decoration: underline royalblue;*/
 }

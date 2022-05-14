@@ -16,44 +16,7 @@
             background-size: cover;
             
         }
-        #start_button{
-            width: 220px;
-            height: 55px;
-            cursor: pointer;
-            margin: 10px;
-            font-size: 20px;
-            border: 0;
-            color: #000;
-            transition-duration: 0.4s;
-            border-radius: 10px;
-            background-color: #b4b4b4;
-        }
-        #start_button:hover{
-            color: #fff;
-            transform: scale(1.1, 1.1);
-        }
-        #weight1{
-            background-color: #0000ff;
-            margin-top: 10px;
-            width: 200px;
-            height: 30px;
-            border-radius: 10px;
-            padding: 10px;
-            font-size: 20px;
-        }
-        #weight2{
-            background-color: #ff0000;
-            margin-top: 10px;
-            width: 200px;
-            height: 30px;
-            border-radius: 10px;
-            padding: 10px;
-            font-size: 20px;
-        }
-        .label-text{
-            font-size: 24px;
-            font-weight: 800;
-        }
+        
     </style>
 </head>
 <body>
@@ -61,7 +24,7 @@
         <a href="../../index.html"><div class="logo"></div></a>
         <nav class="nav-container">
             <ul class="nav-list">
-                <li><a href="#" class="nav-link">Подвижный блок</a></li>
+                <li><a href="#" class="nav-link active">Подвижный блок</a></li>
                 <li><a href="./block.html" class="nav-link">Неподвижный блок</a></li>
                 <li><a href="../arhimed/arhimed.html" class="nav-link">Закон Архимеда</a></li>
             </ul>
@@ -85,6 +48,23 @@
             </div>
         </section>
     </main>
+    <footer class="container footer-container">
+        <div class="footer-text-block">
+            <p class="footer-text">
+            Данная работа является курсовым проектом на тему "Сайт «школьная физическая лаборатория» с интерактивной анимацией, визуализирующей несколько физических процессов"  за авторством студента 2-го курса 9 группы Лядинского Тимофея&copy;
+            </p>
+        </div>
+        <div>
+            <p class="footer-text2">ММФ БГУ, Минск 2022</p>
+        </div>
+        <div class="footer-nav">
+            <ul class="footer-list">
+                <li><a href="#" class="footer-link active">Подвижный блок</a></li>
+                <li><a href="./block.html" class="footer-link">Неподвижный блок</a></li>
+                <li><a href="../arhimed/arhimed.html" class="footer-link">Закон Архимеда</a></li>
+            </ul>
+        </div>
+    </footer>
     <script src="moveable_block.js"></script>
 </body>
 </html>
