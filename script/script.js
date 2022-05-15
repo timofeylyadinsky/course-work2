@@ -1,4 +1,4 @@
-var canvas = document.getElementById('canvas');
+/*var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
 var img = new Image();
@@ -10,12 +10,28 @@ img.onload = function() {
     pat = ctx.createPattern(img, "repeat");
     
 };
-
+*/
 //var img=document.getElementById("wood");
 //var pat=ctx.createPattern(img,"repeat");
 
 
+const hamburger = document.querySelector('.hamburger');
+const navList = document.querySelector('.nav-list');
 
+const navLinks = document.querySelectorAll('.nav-link');
+navLinks.forEach((el) => el.addEventListener('click', closeMenu));
+function closeMenu(event) {
+  if (event.target.classList.contains('nav-link')) {
+    navList.classList.remove('open');
+    hamburger.classList.remove('open');
+  }
+}
+function toggleMenu() {
+  hamburger.classList.toggle('open');
+  navList.classList.toggle('open');
+}
+hamburger.addEventListener('click', toggleMenu);
+/*
 
 var img = new Image();
 var pattern;
@@ -38,7 +54,7 @@ var ball = {
   draw: function() {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
-    /*ctx.fillStyle = this.color;*/
+    /*ctx.fillStyle = this.color;
     ctx.fillStyle = pattern; 
    
     /*
@@ -47,7 +63,7 @@ var ball = {
     var pat = ctx.createPattern(img,'repeat');
     ctx.fillStyle = pat;
     ctx.fill();
-    }*/
+    }
     //ctx.closePath();
     ctx.fill();
     ctx.closePath();
@@ -101,7 +117,7 @@ function startFunc(){
     loadLeft.y+=10;
 
 }
-
+*/
 
 /*
 var myGamePiece;
