@@ -316,8 +316,30 @@ body{
     display: none;
 }
 
+.example-title{
+    font-size: 48px;
+    text-align: center;
+}
+.example-images-block{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.example-images-block img{
+    width:400px; 
+}
 
 @media (max-width: 768px) {
+
+    .example-title{
+        font-size: 24px;
+    }
+    .example-images-block{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 109px;
+    }
     .hamburger {
         display: flex;
         flex-direction: column;

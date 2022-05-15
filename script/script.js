@@ -19,18 +19,20 @@ const hamburger = document.querySelector('.hamburger');
 const navList = document.querySelector('.nav-list');
 
 const navLinks = document.querySelectorAll('.nav-link');
-navLinks.forEach((el) => el.addEventListener('click', closeMenu));
-function closeMenu(event) {
-  if (event.target.classList.contains('nav-link')) {
-    navList.classList.remove('open');
-    hamburger.classList.remove('open');
-  }
-}
+
 function toggleMenu() {
   hamburger.classList.toggle('open');
   navList.classList.toggle('open');
 }
 hamburger.addEventListener('click', toggleMenu);
+
+/*navLinks.forEach((el) => el.addEventListener('click', closeMenu));
+function closeMenu(event) {
+  if (event.target.classList.contains('nav-link')) {
+    navList.classList.remove('open');
+    hamburger.classList.remove('open');
+  }
+}*/
 /*
 
 var img = new Image();
