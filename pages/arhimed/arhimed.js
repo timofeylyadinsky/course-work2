@@ -9,11 +9,28 @@ var water = {
     x: 0,
     y: canvas.height/2,
     density: 1000,
+    color: "#0063FF",
     draw: function() {
         ctx.beginPath();
-        ctx.fillStyle = "#0063FF";
+        ctx.fillStyle = this.color;//"#0063FF";
         ctx.fillRect(this.x, this.y, canvas.width, canvas.height/2);
-        
+
+        /*ctx.fillStyle = "rgba(100,150,185,0.5)";
+        ctx.fillRect(this.x, this.y, canvas.width, canvas.height/2);
+        */
+        ctx.closePath();
+      }
+};
+
+var waterClarity = {
+    x: 0,
+    y: canvas.height/2,
+    density: 1000,
+    color: "rgba(100,150,185,0.3)",
+    draw: function() {
+        ctx.beginPath();
+        ctx.fillStyle = this.color;//"rgba(100,150,185,0.3)";
+        ctx.fillRect(this.x, this.y, canvas.width, canvas.height/2);
         ctx.closePath();
       }
 };
@@ -47,6 +64,7 @@ function drawElements(){
     addColorToGoods();
     water.draw();
     goods.draw();
+    waterClarity.draw();
 }
 
 function setDensity(radio){
@@ -58,6 +76,18 @@ function setDensity(radio){
     }
     drawElements();
 }
+
+function setLiquidDensity(radio){
+    const type = parseInt(radio.value);
+    if(!isNaN(type)){
+        water.density = type;
+        waterClarity.density = type;
+    }else{
+        alert("Error");
+    }
+    drawElements();
+}
+
 
 function addColorToGoods(){
     ctx.clearRect(0,0,innerWidth,innerHeight);
@@ -104,6 +134,28 @@ function addColorToGoods(){
         goods.color = gradient;
         break;
     }
+    switch(water.density){
+    case 1000:
+        water.color = "#0063FF";
+        waterClarity.color = "rgba(100,150,185,0.3)";
+        break;
+    case 930:
+        water.color = "rgba(250,250,40,0.8)";//"#DFDD00";
+        waterClarity.color = "rgba(250,250,40,0.3)";
+        break; 
+    case 800:
+        water.color = "rgba(100,150,185,0.2)";
+        waterClarity.color = "rgba(100,150,185,0.1)";
+        break;
+    case 710:
+        water.color = "rgba(223,158,0,0.3)";//"#DFDD00";
+        waterClarity.color = "rgba(250,250,40,0.3)";
+        break;
+    case 1200:
+            water.color = "rgba(100,150,185,0.4)";//"#DFDD00";
+            waterClarity.color = "rgba(100,150,185,0.1)";
+            break;
+    }
 }
 
 var img = new Image();
@@ -127,7 +179,7 @@ function start(){
     fT = goods.volume * goods.density * g;
     let mGoods = goods.volume * goods.density; 
     a = (fT - fA) / mGoods / 100;
-    if(Math.abs(fT-fA) <= 0.1){
+    if(Math.abs(fT-fA) <= 0.01){
         v = 0;
         return;
     }

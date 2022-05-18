@@ -40,7 +40,7 @@
                 Закон Архимеда
             </h1>
             <p class="subtitle-text">
-                Дан сосуд с жидкостью (вода), плотность которой 1000 кг/см3. В нем находится кубическое тело некоторой плотности, объём которого <span style="font-weight: bold; color: black;">0,1 м3</span>. Выберете материал тела и смотрите результат действия силы Архимеда на него.
+                Дан сосуд с некоторок жидкостью, которую можно выбрать. В нем находится кубическое тело некоторой плотности, объём которого <span style="font-weight: bold; color: black;">0,1 м3</span>. Выберете материал тела и смотрите результат действия силы Архимеда на него.
             </p>
              <canvas id="canvas" width="600" height="700"></canvas>
     <!--
@@ -49,41 +49,82 @@
     <div><label for="weight2">Weight for red</label>
             <input id="weight2" type="text" name="weight2" value="" placeholder="weight_red"></div>-->
 
-        <div id="form_block">
-                 <div id="checkbox_element">
-                    <label for="density1" class="workplace__container">
-                        <input type="radio" checked="checked" id="density1" name="density" value="240" onclick="setDensity(this)">
-                        Пробка
+        <div class="input_info"> 
+            <div id="form_block">
+                <h3 class="input_title">Тело</h3>
+                     <div id="checkbox_element">
+                        <label for="density1" class="workplace__container">
+                            <input type="radio" checked="checked" id="density1" name="density" value="240" onclick="setDensity(this)">
+                            Пробка
+                            <span class="checkmark"></span>
+                        </label>
+                </div>
+                <div id="checkbox_element">
+                    <label for="density3" class="workplace__container">
+                        <input type="radio" id="density3" name="density" value="700" onclick="setDensity(this)">
+                            Дуб
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div id="checkbox_element">
+                    <label for="density2" class="workplace__container">
+                        <input type="radio" id="density2" name="density" value="2700" onclick="setDensity(this)">
+                        Мрамор
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div id="checkbox_element">
+                    <label for="density4" class="workplace__container">
+                        <input type="radio" id="density4" name="density" value="8900" onclick="setDensity(this)">
+                            Медь
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div id="checkbox_element">
+                    <label for="density5" class="workplace__container">
+                        <input type="radio" id="density5" name="density" value="1800" onclick="setDensity(this)">
+                            Кирпич
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="form_block">
+                <h3 class="input_title">Жидкость</h3>
+                <div id="checkbox_element">
+                    <label for="densityForLiquid1" class="workplace__container">
+                        <input type="radio" checked="checked" id="densityForLiquid1" name="densityForLiquid" value="1000" onclick="setLiquidDensity(this)">
+                        Вода
                         <span class="checkmark"></span>
                     </label>
             </div>
             <div id="checkbox_element">
-                <label for="density3" class="workplace__container">
-                    <input type="radio" id="density3" name="density" value="700" onclick="setDensity(this)">
-                        Дуб
+                <label for="densityForLiquid2" class="workplace__container">
+                    <input type="radio" id="densityForLiquid2" name="densityForLiquid" value="930" onclick="setLiquidDensity(this)">
+                        Масло
                     <span class="checkmark"></span>
                 </label>
             </div>
             <div id="checkbox_element">
-                <label for="density2" class="workplace__container">
-                    <input type="radio" id="density2" name="density" value="2700" onclick="setDensity(this)">
-                    Мрамор
+                <label for="densityForLiquid3" class="workplace__container">
+                    <input type="radio" id="densityForLiquid3" name="densityForLiquid" value="800" onclick="setLiquidDensity(this)">
+                    Спирт
                     <span class="checkmark"></span>
                 </label>
             </div>
             <div id="checkbox_element">
-                <label for="density4" class="workplace__container">
-                    <input type="radio" id="density4" name="density" value="8900" onclick="setDensity(this)">
-                        Медь
+                <label for="densityForLiquid4" class="workplace__container">
+                    <input type="radio" id="densityForLiquid4" name="densityForLiquid" value="710" onclick="setLiquidDensity(this)">
+                        Бензин
                     <span class="checkmark"></span>
                 </label>
             </div>
             <div id="checkbox_element">
-                <label for="density5" class="workplace__container">
-                    <input type="radio" id="density5" name="density" value="1800" onclick="setDensity(this)">
-                        Кирпич
+                <label for="densityForLiquid5" class="workplace__container">
+                    <input type="radio" id="densityForLiquid5" name="densityForLiquid" value="1200" onclick="setLiquidDensity(this)">
+                        Глицерин
                     <span class="checkmark"></span>
                 </label>
+            </div>
             </div>
         </div>
             <button onclick="start()" id="start_button">Start</button>
