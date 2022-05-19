@@ -26,6 +26,20 @@ function toggleMenu() {
 }
 hamburger.addEventListener('click', toggleMenu);
 
+
+
+
+
+
+var x = document.getElementById("contain");
+
+x.addEventListener("click", myFunction);
+
+function myFunction() {
+  var element = document.getElementById("theory_text");
+  element.classList.toggle("open");
+}
+
 /*navLinks.forEach((el) => el.addEventListener('click', closeMenu));
 function closeMenu(event) {
   if (event.target.classList.contains('nav-link')) {

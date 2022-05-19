@@ -15,6 +15,40 @@ body{
     align-items: center;
     flex-direction: column;
 }
+
+.theory_info_title{
+    font-size: 160%;
+    color: #B4B4B4;
+    margin: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.theory_info {
+    overflow: hidden;
+    background: #ccc8cd;
+    height: 0;
+    max-height: 0px; 
+    list-style-type: none;
+    padding-left: 0;
+    -webkit-transition: linear 1s;
+    transition: linear 1s;
+    font-size: 20px;
+    width: 70%;
+    text-align: center;
+    
+  }
+  
+.theory_info.open {
+    height: auto;
+    max-height: 500px; 
+    -webkit-transition: linear 1s;
+    transition: linear 1s;
+    line-height: 30px;
+    padding: 15px 15px 15px 0;
+  
+  }
+
+
 .container {
     max-width: 1440px;
     margin: 0;
@@ -198,6 +232,7 @@ body{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    margin-top: 20px;
 }
 .footer-text-block{
     font-size: 20px;
