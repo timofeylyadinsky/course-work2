@@ -325,6 +325,45 @@ body{
     text-align: center;
     
 }
+.energy_input{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-end;
+}
+
+
+
+.input_form_1{
+    background-color: #0000ff;
+    margin-top: 10px;
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 24px;
+    transition-duration: 0.4s;
+}
+.input_form_2{
+    background-color: #ff0000;
+    margin-top: 10px;
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 24px;
+    transition-duration: 0.7s;
+}
+.input_form_1:focus{
+    text-shadow: 0 3px 3px rgba(0,0,255,.85);
+    background-color: lightblue;
+}
+.input_form_2:focus{
+    text-shadow: 0 3px 3px rgba(255,0,0,.85);
+    background-color: lightcoral;
+}
+
+
 
 
 .hamburger{
