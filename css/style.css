@@ -24,6 +24,7 @@ body{
     margin: 5px;
     cursor: pointer;
     font-weight: bold;
+    text-decoration: underline;
 }
 .theory_info {
     overflow: hidden;
@@ -52,6 +53,10 @@ body{
 .bold-text{
     font-weight: bold;
 }
+
+
+
+
 
 .container {
     max-width: 1440px;
