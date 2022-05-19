@@ -106,14 +106,18 @@ function start(){
             ballleft.x = ballRight.x - ballLeft.radius - ballRight.radius;
         }
 
+    }else if(ballLeft.x - ballLeft.radius + ballLeft.speed <= 0 ||  ballRight.x + ballRight.radius + ballRight.speed >= canvas.width){
+        if(ballLeft.x - ballLeft.radius + ballLeft.speed <= 0){
+            ballLeft.speed *= -1;
+        }
+        if(ballRight.x + ballRight.radius + ballRight.speed >= canvas.width){
+            ballRight.speed *= -1;
+        }
     }else{
         ballLeft.x += ballLeft.speed;
         ballRight.x += ballRight.speed;
     }
-    
-
-
-    
+        
 
 
 

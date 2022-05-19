@@ -215,6 +215,8 @@ function start(){
             goods.volumeInWater = 1 - heightAbove;
             goods.volumeOutWater = 0 + heightAbove;
         }
+    }else{
+        goods.volumeInWater = 1;
     }
 
 

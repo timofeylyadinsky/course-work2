@@ -53,6 +53,7 @@ body{
     flex-direction: row;
     align-items: center;
     justify-content: start;
+    flex-wrap: wrap;
     padding: 0;
     color: #fff;
     height: 50px;
@@ -385,6 +386,37 @@ body{
 }
 
 @media (max-width: 768px) {
+    .input_title{
+        font-size: 100%;
+        font-weight: bold;
+        text-align: center;
+        
+    }
+    .input_info{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 10px;
+    }
+    .energy_canvas{
+        width: 95%;
+    }
+    .input_form_1{
+        margin-top: 5px;
+        width: 90px;
+        height: 20px;
+        border-radius: 10px;
+        padding: 5px;
+        font-size: 20px;
+    }
+    .input_form_2{
+        margin-top: 5px;
+        width: 90px;
+        height: 20px;
+        border-radius: 10px;
+        padding: 5px;
+        font-size: 20px;
+    }
 
 
 
