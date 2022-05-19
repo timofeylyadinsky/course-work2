@@ -15,6 +15,7 @@
             /*background-color: #F4EEEA;*/
             background-image: url("../../assets/glass-texture.jpg");
             background-size: cover;
+            height: 400px;
         }
     </style>
 </head>
@@ -42,13 +43,13 @@
             <p class="subtitle-text">
                 Дан сосуд с некоторок жидкостью, которую можно выбрать. В нем находится кубическое тело некоторой плотности, объём которого <span style="font-weight: bold; color: black;">0,1 м3</span>. Выберете материал тела и смотрите результат действия силы Архимеда на него.
             </p>
-             <canvas id="canvas" width="600" height="700"></canvas>
+             <canvas id="canvas" width="500" height="700"></canvas>
     <!--
     <div><label for="weight1">Weight for blue</label>
 		<input id="weight1" type="text" name="weight1" value="" placeholder="weight_blue"></div>
     <div><label for="weight2">Weight for red</label>
             <input id="weight2" type="text" name="weight2" value="" placeholder="weight_red"></div>-->
-
+            <button onclick="start()" id="start_button">Start</button>
         <div class="input_info"> 
             <div id="form_block">
                 <h3 class="input_title">Тело</h3>
@@ -127,7 +128,7 @@
             </div>
             </div>
         </div>
-            <button onclick="start()" id="start_button">Start</button>
+            
         </section>
     </main>
     <footer class="container footer-container">

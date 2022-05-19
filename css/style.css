@@ -29,8 +29,8 @@ body{
     font-size: 32px;
 }
 .logo {
-    width: 180px;
-    height: 184px;
+    width: 160px;
+    height: 164px;
     background-image: url('../assets/physics_logo.svg');
     background-size: contain;
     background-repeat: no-repeat;  
@@ -59,7 +59,7 @@ body{
     margin-top: 72px;
 }
 .nav-list li{
-    margin: 0 0 0 80px;
+    margin: 0 0 0 30px;
 }
 .nav-link{
     color: #B4B4B4;
@@ -103,7 +103,7 @@ body{
     align-items: center;
 }
 .main-title{
-    margin-top: 135px;
+    margin-top: 50px;
     font-weight: 700;
     font-size: 64px;
     color: #CDCDCD;
@@ -112,7 +112,7 @@ body{
 }
 
 .subtitle-text{
-    margin-top: 55px;
+    margin-top: 35px;
     font-weight: 400;
     font-size: 26px;
     text-align: center;
@@ -320,7 +320,7 @@ body{
 }
 
 .input_title{
-    font-size: 170%;
+    font-size: 150%;
     font-weight: bold;
     text-align: center;
     
@@ -336,7 +336,7 @@ body{
 
 .input_form_1{
     background-color: #0000ff;
-    margin-top: 10px;
+    margin-top: 5px;
     width: 200px;
     height: 30px;
     border-radius: 10px;
@@ -346,7 +346,7 @@ body{
 }
 .input_form_2{
     background-color: #ff0000;
-    margin-top: 10px;
+    margin-top: 5px;
     width: 200px;
     height: 30px;
     border-radius: 10px;
@@ -384,6 +384,39 @@ body{
 }
 
 @media (max-width: 768px) {
+
+    canvas{
+        height: 300px;
+    }
+
+    #start_button{
+        width: 120px;
+        height: 35px;
+        cursor: pointer;
+        margin: 5px;
+        font-size: 15px;
+        border: 0;
+        color: #000;
+        transition-duration: 0.4s;
+        border-radius: 10px;
+    }
+
+    #weight1{
+        margin-top: 5px;
+        width: 150px;
+        height: 20px;
+        font-size: 20px;
+    }
+    #weight2{
+        margin-top: 5px;
+        width: 150px;
+        height: 20px;
+        font-size: 20px;
+    }
+
+
+
+
 
 
     body{
