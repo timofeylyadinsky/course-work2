@@ -14,6 +14,8 @@ body{
     display: flex;
     align-items: center;
     flex-direction: column;
+    /*font-family: 'Roboto', sans-serif;*/
+    font-family: 'Montserrat', sans-serif;
 }
 
 .theory_info_title{
@@ -35,7 +37,7 @@ body{
     font-size: 20px;
     width: 70%;
     text-align: center;
-    
+    font-style: italic;
   }
   
 .theory_info.open {
@@ -47,7 +49,9 @@ body{
     padding: 15px 15px 15px 0;
   
   }
-
+.bold-text{
+    font-weight: bold;
+}
 
 .container {
     max-width: 1440px;
