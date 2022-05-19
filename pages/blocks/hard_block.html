@@ -44,10 +44,10 @@
     <main class="container">
         <section class="canvas-container">
             <h1 class="main-title">
-                Подвижный блок
+                Блоки
             </h1>
             <p class="subtitle-text">
-                Дана система из двух блоков: подвижного и неподвижного. Введите значения массы каждого блока, чтобы посмотреть на изменения. Примечание массы по умолчанию: <span style="font-weight: bold; color: blue">5кг.</span> и <span style="font-weight: bold; color: red">10кг.</span>
+               Дана система из подвижного блока и двух неподвижных
             </p>
             <p class="theory_info_title" id="contain">
                 <span class="material-symbols-outlined open-icon" style="font-size:36px; text-align: center;">
@@ -58,16 +58,17 @@
             <p class="theory_info" id="theory_text">
                 <span class="bold-text">Подвижный блок</span> — ось блока в обоймах, к которым прикрепляется груз, и блок вместе с ними, который не закреплен неподвижно. Такой блок позволяет прилагать меньшую силу для подъема, чем вес груза.
                 В случае, когда концы верёвки, обхватывающей блок, составляют с горизонтом равные между собой углы, то прилагаемая для подъема сила F будет вдвое меньше его веса, то есть вес груза распределяется по двум частям охватывающей блок верёвки:
-                <a href="hard_block.html" class="info-link" >Пример на сложную систему</a>
             </p>
             </p>
             <canvas id="canvas" width="500" height="900"></canvas>
             <div class="input-block1">
-                <button onclick="start()" id="start_button">Start</button>
+                <button onclick="validate()" id="start_button">Start</button>
                 <div><label for="weight1" class="label-text">Вес первого, кг.</label>
 		            <input id="weight1" type="text" name="weight1" value="5" placeholder="weight_blue"></div>
                 <div><label for="weight2" class="label-text">Вес второго, кг.</label>
-                    <input id="weight2" type="text" name="weight2" value="10" placeholder="weight_red"></div>  
+                    <input id="weight2" type="text" name="weight2" value="10" placeholder="weight_red"></div>
+                <div><label for="weight3" class="label-text">Вес tретьего, кг.</label>
+                        <input id="weight3" type="text" name="weight3" value="5" placeholder="weight_orange"></div>    
             </div>
         </section>
     </main>
@@ -90,6 +91,6 @@
         </div>
     </footer>
     <script src="../../script/script.js"></script>
-    <script src="moveable_block.js"></script>
+    <script src="hard_block.js"></script>
 </body>
 </html>

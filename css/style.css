@@ -43,7 +43,7 @@ body{
   
 .theory_info.open {
     height: auto;
-    max-height: 500px; 
+    max-height: 1000px; 
     -webkit-transition: linear 1s;
     transition: linear 1s;
     line-height: 30px;
@@ -54,8 +54,15 @@ body{
     font-weight: bold;
 }
 
-
-
+.info-link{
+    color:blueviolet;
+    text-decoration: none;
+}
+.info-link:hover{
+    color: #FFFFFF;
+    /*outline: dotted red;
+    text-decoration: underline royalblue;*/
+}
 
 
 .container {
@@ -229,6 +236,21 @@ body{
 #weight2:focus{
     text-shadow: 0 3px 3px rgba(255,0,0,.85);
     background-color: lightcoral;
+}
+
+#weight3{
+    background-color: #ff8000;
+    margin-top: 10px;
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 24px;
+    transition-duration: 0.7s;
+}
+#weight3:focus{
+    text-shadow: 0 3px 3px rgba(255, 130, 21, 0.85);
+    background-color: rgb(255, 253, 154);
 }
 .label-text{
     font-size: 24px;
@@ -483,6 +505,12 @@ body{
         font-size: 20px;
     }
     #weight2{
+        margin-top: 5px;
+        width: 150px;
+        height: 20px;
+        font-size: 20px;
+    }
+    #weight3{
         margin-top: 5px;
         width: 150px;
         height: 20px;
