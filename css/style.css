@@ -105,7 +105,7 @@ body{
 .main-title{
     margin-top: 50px;
     font-weight: 700;
-    font-size: 64px;
+    font-size: 60px;
     color: #CDCDCD;
     margin-bottom: 0;
     text-align: center;
@@ -114,7 +114,7 @@ body{
 .subtitle-text{
     margin-top: 35px;
     font-weight: 400;
-    font-size: 26px;
+    font-size: 24px;
     text-align: center;
     line-height: 28px;
     width: 577px;
@@ -143,9 +143,10 @@ body{
 
 #start_button{
     width: 220px;
-    height: 55px;
+    height: 50px;
     cursor: pointer;
     margin: 10px;
+    margin-top: 5px;
     font-size: 20px;
     border: 0;
     color: #000;
@@ -161,7 +162,7 @@ body{
     background-color: #0000ff;
     margin-top: 10px;
     width: 200px;
-    height: 30px;
+    height: 25px;
     border-radius: 10px;
     padding: 10px;
     font-size: 24px;
@@ -385,9 +386,7 @@ body{
 
 @media (max-width: 768px) {
 
-    canvas{
-        height: 300px;
-    }
+
 
     #start_button{
         width: 120px;
