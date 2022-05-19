@@ -446,9 +446,11 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 .example-images-block img{
-    width:400px; 
+    width:300px; 
 }
 
 @media (max-width: 768px) {
