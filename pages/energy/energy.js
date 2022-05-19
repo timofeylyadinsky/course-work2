@@ -73,6 +73,7 @@ drawElements();
 
 function drawElements(){
     ctx.clearRect(0,0,innerWidth,innerHeight);
+    ctx.clearRect(0,0,innerWidth,innerHeight);
     surface.draw();
     ballLeft.draw();
     ballRight.draw();
@@ -120,7 +121,7 @@ function start(){
         
 
 
-
+    ctx.clearRect(0,0,canvas.width,canvas.height);
     drawElements();
     requestAnimationFrame(start)
 }

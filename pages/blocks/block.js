@@ -157,6 +157,7 @@ function start(){
             a=0;
             return;
         }
+        ctx.clearRect(0,0,canvas.width,canvas.height);
         ctx.clearRect(0,0,innerWidth,innerHeight);
         drawElements();
         ropeRight.yEnd-=a;

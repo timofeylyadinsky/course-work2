@@ -61,6 +61,7 @@ var goods = {
 
 function drawElements(){
     ctx.clearRect(0,0,innerWidth,innerHeight);
+    ctx.clearRect(0,0,canvas.width,canvas.height);
     addColorToGoods();
     water.draw();
     goods.draw();
@@ -223,6 +224,7 @@ function start(){
     v+=a;
     goods.y+=v;
     ctx.clearRect(0,0,innerWidth,innerHeight);
+    ctx.clearRect(0,0,canvas.width,canvas.height);
     drawElements();
     requestAnimationFrame(start)
 }

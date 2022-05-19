@@ -161,6 +161,7 @@ var loadRight = {
 drawElements();
 
 function drawElements(){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
     block.draw();
     topLine.draw();
     ropeLeft.draw();
