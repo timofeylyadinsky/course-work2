@@ -181,7 +181,7 @@ function start(){
     a = (fT - fA) / mGoods / 100;
     if(Math.abs(fT-fA) <= 0.01){
         v = 0;
-        return;
+        //return;
     }
    
     if(goods.y + 0.5 * goods.size > canvas.height && a > 0){
@@ -191,7 +191,7 @@ function start(){
         v = 0;
         ctx.clearRect(0,0,innerWidth,innerHeight);
         drawElements();
-        return;
+        //return;
     }else if(goods.y + 0.5 * goods.size > canvas.height && a < 0){
         goods.y = canvas.height - 0.5 * goods.size;
         //a = 0;
@@ -207,7 +207,7 @@ function start(){
             heightAbove /= goods.size;
             goods.volumeInWater = 1 - heightAbove;
             goods.volumeOutWater = 0 + heightAbove;
-            v = 5 * a;
+            v = 20 * a;
         }else{
             let heightAbove = 0;
             heightAbove = water.y - goods.y + goods.size * 0.5;
@@ -216,6 +216,8 @@ function start(){
             goods.volumeOutWater = 0 + heightAbove;
         }
     }
+
+
     v+=a;
     goods.y+=v;
     ctx.clearRect(0,0,innerWidth,innerHeight);
