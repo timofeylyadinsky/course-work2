@@ -15,6 +15,17 @@ var surface = {
         ctx.fillStyle = this.color;//"#0063FF";
         ctx.fillRect(this.x, this.y, canvas.width, 20);
         ctx.closePath();
+        let tmpX = this.x;
+        while(tmpX < canvas.width){
+            ctx.beginPath();
+            ctx.lineWidth = 3;
+            ctx.moveTo(tmpX, this.y+20);
+            tmpX+=10;
+            ctx.lineTo(tmpX, this.y+30);
+            ctx.strokeStyle = "black";
+            ctx.closePath();
+            ctx.stroke();
+        };
       }
 };
 
